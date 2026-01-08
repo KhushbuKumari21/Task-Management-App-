@@ -1,0 +1,335 @@
+/* ============================= */
+/* Reset & Base */
+/* ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* ============================= */
+/* Container */
+/* ============================= */
+.container {
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================= */
+/* Heading */
+/* ============================= */
+h1 {
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #4f46e5;
+  margin-bottom: 28px;
+}
+
+/* ============================= */
+/* Inputs */
+/* ============================= */
+input,
+select {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 15px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+}
+
+/* ============================= */
+/* Buttons */
+/* ============================= */
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 13px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  background: #4f46e5;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #4338ca;
+}
+
+/* ============================= */
+/* Task Add */
+/* ============================= */
+.task-add {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.task-add input {
+  flex: 1;
+}
+
+.task-add button {
+  width: auto;
+  padding: 13px 22px;
+}
+
+/* ============================= */
+/* Task Item */
+/* ============================= */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: #f9fafb;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+/* ============================= */
+/* Task Buttons */
+/* ============================= */
+.task-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.task-buttons button {
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+/* ============================= */
+/* Task Edit */
+/* ============================= */
+.task-edit {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.task-edit input {
+  flex: 1;
+}
+
+/* Save */
+.task-edit button:first-child {
+  background: #16a34a;
+}
+
+/* Cancel */
+.task-edit button:last-child {
+  background: #dc2626;
+}
+
+/* ============================= */
+/* Pagination */
+/* ============================= */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.pagination button {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.pagination button:hover {
+  background: #d1d5db;
+}
+
+/* ============================= */
+/* Responsive */
+/* ============================= */
+@media (max-width: 480px) {
+  .container {
+    padding: 1.75rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .task-add,
+  .task-edit {
+    flex-direction: column;
+  }
+
+  .task-add button,
+  .task-edit button {
+    width: 100%;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .task-buttons {
+    align-self: flex-end;
+  }
+}
+.logout-btn {
+  width: 100%;
+  padding: 14px 0;
+  margin-top: 20px;
+  font-size: 15.5px;
+  font-weight: 600;
+  border-radius: 12px;
+  background: #ef4444;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+.register-btn {
+  width: 100%;
+  padding: 14px 0;
+  margin-top: 16px;
+  font-size: 15.5px;
+  font-weight: 600;
+  border-radius: 12px;
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.register-btn:hover {
+  background: #4338ca;
+}
+
+.register-btn:active {
+  transform: scale(0.98);
+}
+.auth-text {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14.5px;
+  color: #374151;
+}
+
+.auth-link {
+  margin-left: 4px;
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 14px 0;
+  margin-top: 16px;
+  font-size: 15.5px;
+  font-weight: 600;
+  border-radius: 12px;
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.login-btn:hover {
+  background: #4338ca;
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+}
+
+.register-text {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14.5px;
+  color: #374151;
+}
+
+.register-link {
+  margin-left: 4px;
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+/* Save Button */
+.save-btn {
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+  background: #4f46e5;      
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.save-btn:hover {
+  background: #4338ca;
+}
+
+.save-btn:active {
+  transform: scale(0.97);
+}
+
+/* Cancel Button */
+.cancel-btn {
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+  background: #ef4444;      
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.cancel-btn:hover {
+  background: #dc2626;
+}
+
+.cancel-btn:active {
+  transform: scale(0.97);
+}
